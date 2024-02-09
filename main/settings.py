@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap5',
     'base', 
-    'user_auth'
+    'user_auth', 
+    'gallery',
+    'uploading'
 ]
 
 MIDDLEWARE = [

@@ -51,7 +51,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 logger.info(f'You are now logged in as {username}.')
-                return redirect('/')
+                return redirect('/user/login')
             else:
                 logger.error('Invalid username or password')
         else:
