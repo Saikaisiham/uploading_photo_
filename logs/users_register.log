@@ -1,0 +1,5 @@
+Error saving user: list indices must be integers or slices, not str
+2024-02-09 16:34:56,867 - user_auth.views - DEBUG - Form data: <QueryDict: {'csrfmiddlewaretoken': ['dREwVfKYqmgwx4C4MFGjFINGU15rTecQ2N6RxqDvN0I4EbDc3DFEdQR4zEpd4ORE'], 'username': ['test_username'], 'email': ['email@email.com'], 'password1': ['moad2008@'], 'password2': ['moadé008@']}>
+2024-02-09 16:34:56,867 - user_auth.views - DEBUG - Is form valid? False
+2024-02-09 16:38:44,999 - user_auth.views - INFO - The account for user 'siham' has been successfully created
+2024-02-09 16:38:44,999 - user_auth.views - DEBUG - Cleaned data: {'username': 'siham', 'email': 'siham@siham.com', 'password1': 'siham2001@', 'password2': 'siham2001@'}
