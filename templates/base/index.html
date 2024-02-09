@@ -1,0 +1,23 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+<body>
+<header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid container-xxl d-flex align-items-center">
+        <div id="logo" class="me-auto">
+          <a href="index.html" class="scrollto"><img src="" alt="" title=""></a>
+        </div>
+    </div>
+</header>  
+<section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="mb-4 pb-0">SmartLens<br><span>Upload Photos</span></h1>
+      <p class="mb-4 pb-0">Discover Objects</p>
+      <a href="/sign/" class="about-btn scrollto">Register Now</a>
+    </div>
+</section>
+</body>
+</html>
