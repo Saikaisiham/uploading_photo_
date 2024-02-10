@@ -1,6 +1,7 @@
 from django.urls import path 
-from .views import  download_view
+from .views import  main_page, generate_pdf_view
 
 urlpatterns = [
-    path('', download_view, name='download_images'),
+    path('', main_page, name='main'),
+    path('pdf', generate_pdf_view, name='pdf')
 ]

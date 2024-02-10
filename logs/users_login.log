@@ -1,5 +1,5 @@
-Error saving user: list indices must be integers or slices, not str
-2024-02-09 16:34:56,867 - user_auth.views - DEBUG - Form data: <QueryDict: {'csrfmiddlewaretoken': ['dREwVfKYqmgwx4C4MFGjFINGU15rTecQ2N6RxqDvN0I4EbDc3DFEdQR4zEpd4ORE'], 'username': ['test_username'], 'email': ['email@email.com'], 'password1': ['moad2008@'], 'password2': ['moadé008@']}>
-2024-02-09 16:34:56,867 - user_auth.views - DEBUG - Is form valid? False
-2024-02-09 16:38:44,999 - user_auth.views - INFO - The account for user 'siham' has been successfully created
-2024-02-09 16:38:44,999 - user_auth.views - DEBUG - Cleaned data: {'username': 'siham', 'email': 'siham@siham.com', 'password1': 'siham2001@', 'password2': 'siham2001@'}
+2024-02-09 23:37:27,030 - user_auth.views - DEBUG - Is form valid? False
+2024-02-09 23:37:38,959 - user_auth.views - INFO - The account for user 'Oussama' has been successfully created
+2024-02-09 23:44:33,219 - user_auth.views - ERROR - Invalid username or password
+2024-02-09 23:44:56,820 - user_auth.views - INFO - You are now logged in as Oussama.
+2024-02-09 23:45:38,906 - user_auth.views - INFO - You are now logged in as Oussama.

@@ -27,13 +27,11 @@ def register_request(request):
                 user = form.save()
                 login(request, user)
                 logger.info(f"The account for user '{user.username}' has been successfully created")
-                cleaned_data = form.cleaned_data
-                logger.debug(f"Cleaned data: {cleaned_data}")
                 return redirect('/')
             except Exception as e:
                 logger.error(f"Error saving user: {e}", exc_info=True)
         else:
-            logger.debug(f"Form data: {request.POST}")
+
             logger.debug(f"Is form valid? {form.is_valid()}")
 
     else:
@@ -51,7 +49,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 logger.info(f'You are now logged in as {username}.')
-                return redirect('/user/login')
+                return redirect('/gallery/')
             else:
                 logger.error('Invalid username or password')
         else:

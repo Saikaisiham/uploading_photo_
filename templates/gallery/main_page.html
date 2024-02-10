@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    <h1>Main Page</h1>
+    
+    <h2>Uploaded Images:</h2>
+    <ul>
+        {% for image in images %}
+            <li>
+                <img src="{{ image.image.url }}" alt="{{ image.description }}">
+                <p>{{ image.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'pdf' %}">Generate PDF</a>
+</body>
+</html>
