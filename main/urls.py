@@ -25,7 +25,4 @@ urlpatterns = [
     path('user/', include('user_auth.urls')),
     path('gallery/', include('gallery.urls')),
     path('uploading/', include('uploading.urls'))
-]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
