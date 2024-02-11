@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'uploading_image',
         'USER': 'uploading_project_admin',
         'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'HOST': 'db_smartlens',
         'PORT': 5432,
     }
 }

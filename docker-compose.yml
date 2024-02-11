@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/data_
+    environment:
+      - DEBUG=True
+    image: smartlens/smartlens
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db_smartlens
+    networks:
+      - my_network  
+
+  db_smartlens:
+    image: postgres
+    volumes:
+      - ./data_/db_smartlens:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=uploading_image
+      - POSTGRES_USER=uploading_project_admin
+      - POSTGRES_PASSWORD=password
+    networks:
+      - my_network  
+
+networks:
+  my_network:
+    driver: bridge
