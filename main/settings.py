@@ -145,5 +145,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #celery config
-CELERY_BROKER_URL = 'pyamqp://guest:guest@localhost:5672//'
+CELERY_BROKER_URL = 'pyamqp://guest:guest@localhost:15672//'
 CELERY_RESULT_BACKEND = 'db+postgresql://django:password123@localhost:5432/django'
