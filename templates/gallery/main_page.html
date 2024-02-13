@@ -1,23 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
 </head>
 <body>
-    <h1>Main Page</h1>
-    
-    <h2>Uploaded Images:</h2>
-    <ul>
+    <div class="container">
+        <center><h2>Uploaded Images:</h2></center>   
         {% for image in images %}
-            <li>
-                <img src="{{ image.image.url }}" alt="{{ image.description }}">
-                <p>{{ image.description }}</p>
-            </li>
+            <div class="card">
+                <img src="{{ image.image.url }}" alt="{{ image.prediction }}">
+                <p>{{ image.prediction }}</p>
+                <p>{{ image.created_at }}</p>
+            </div>
         {% endfor %}
-    </ul>
 
-    <a href="{% url 'pdf' %}">Generate PDF</a>
+        <a href="{% url 'pdf' %}" class="button">Generate PDF</a>
+        <a href="/uploading/" class="button">Upload New Photo</a>
+    </div>
 </body>
 </html>
