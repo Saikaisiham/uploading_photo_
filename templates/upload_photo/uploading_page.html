@@ -1,17 +1,47 @@
 {% load static %}
-{% load bootstrap5 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
 
+<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
 
-
-
-<form action="" method="post" enctype="multipart/form-data" >
+<body>
+  <form action="" method="post">
     {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">Upload</button>
 
-</form>
+    <section class="vh-100 bg-image">
+      <div class="mask d-flex align-items-center h-100">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
 
+                  <h2 class="text-uppercase text-center mb-5"></h2>
+                  <center>
+                    <table>
+                      <tr>
+                        <td>
+                          Upload The Image
+                        </td>
+                        <td>
+                          <div class="form-outline mb-4">
 
-<a href="/gallery/">Go to Gallery </a>
+                            <label class="form-label" for="form3Example1cg">{{form}}</label>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn btn-primary btn-block btn-lg text-body">Process</button>
+                    </div>
+                  </center>
+                  <p class="text-center text-muted mt-5 mb-0"><a href="/gallery/" class="fw-bold text-body"><u>Back</u></a></p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </form>
+</body>

@@ -10,10 +10,10 @@ plt.style.use('fivethirtyeight')
 from skimage.transform import resize
 from PIL import Image
 from keras.datasets import cifar10
-from django.core.management import call_command
+
 
 def classify_image(image):
-    call_command('consumer')
+
     (x_train, y_train),(x_test, y_test) = cifar10.load_data()
 
     index = 0
